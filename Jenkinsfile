@@ -16,7 +16,7 @@ pipeline {
 
       stage('Deploy') {
          steps {
-			sh ''
+			sh 'kubectl apply --filename webapp.yaml'
          }
       }
       
