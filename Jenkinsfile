@@ -17,7 +17,7 @@ pipeline {
       stage('Deploy') {
          steps {
 			sh '''
-				docker container run --rm --detach --port 5000:8080 webapp:0.0.1
+				docker container run --rm --detach --publish 5000:8080 webapp:0.0.1
 			'''
          }
       }
